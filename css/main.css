@@ -1,0 +1,145 @@
+.desc {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    transform: scale(0.5);
+    padding: 20px;
+    transition: .4s;
+}
+
+.desc p {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.adv .item:hover .desc {
+    opacity: 1;
+    transform: scale(1);
+    transition: .4s;
+}
+
+.adv img {
+    transition: .3s;
+}
+
+@media(max-width: 576px) {
+    .desc {
+        display: none;
+    }
+    .adv .item:hover img {
+        transform: scale(1.2);
+        transition: .3s;
+    }
+}
+
+.house {
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -220px;
+}
+
+@media(max-width: 1260px) {
+    .house {
+        max-height: 700px;
+        margin-top: -70px;
+    }
+}
+
+@media(max-width: 768px) {
+    .house {
+        max-height: 500px;
+    }
+}
+
+.why {
+    padding: 60px 0 135px 0;
+}
+
+@media(max-width: 960px) {
+    .why {
+        padding: 40px 0 100px 0;
+    }
+}
+
+.gallery {
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.service {
+    min-height: 560px;
+    position: relative;
+    z-index: 700;
+    background-color: rgba(0,0,0,0.7);
+    padding: 70px 0;
+}
+
+@media(max-width: 960px) {
+    .service {
+        min-height: auto;
+    }
+}
+
+.service:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 800%;
+    left: -800%;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.contact-info {
+    margin-top: 27px;
+}
+
+.contact-info p {
+    margin-top: 3px;
+}
+
+.contact-info p:first-child {
+    margin-top: 0;
+}
+
+.contact-info a {
+    color: #fff;
+}
+
+.contact-info a:hover {
+    color: #ffa100;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 960px) {
+    iframe {
+        position: relative;
+        height: 100vh;
+    }
+    .service {
+        background: none;
+    }
+    .service:before {
+        display: none;
+    }
+    .area {
+        background-color: #000;
+    }
+}
